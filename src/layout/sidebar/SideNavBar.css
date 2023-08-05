@@ -6,6 +6,7 @@
 	color: var(--dark);
 	background-image: url("./sidebarBackground.png");
 	background-size: contain;
+	background-repeat: no-repeat;
 	transition: 1s;
 }
 @media (max-width: 768px) {
