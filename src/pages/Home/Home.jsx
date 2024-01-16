@@ -8,18 +8,7 @@ import home2 from './img/header2.jpg';
 function Home() {
 
     const [nutrition, setNutrition] = useState(false);
-    const handleClick = (nutri) => {
-        var tabela = document.querySelector(".nutrition");
-        var detalhes = document.querySelector(".details");
-
-        if (nutri == true) {
-            tabela.classList.add("active");
-            detalhes.classList.remove("active");
-        } else {
-            detalhes.classList.add("active");
-            tabela.classList.remove("active");
-        }
-    }
+    const [tabela, setTabela] = useState(false);
     const data = [
 
         { Ingredientes: "Valor Energético (kcal):", Quantidade: 4.4 },
@@ -91,16 +80,16 @@ function Home() {
 
                     <div class="mobile-screen">
                         <div class="col-12 mb-3 d-flex justify-content-between details-mobile" >
-                            <button class="buttonDetails1 col-4 " type="button" onClick={e => handleClick(true)} >
+                            <button class="buttonDetails1 col-4 " type="button" onClick={e => setTabela(true)} >
                                 <p>TABELA</p>
                             </button>
-                            <button class="buttonDetails1 col-4" type="button" onClick={e => handleClick(false)}>
+                            <button class="buttonDetails1 col-4" type="button" onClick={e => setTabela(false)}>
                                 <p>DETALHES</p>
                             </button>
 
 
                         </div>
-                        <div class="col-12 nutrition active" >
+                        <div class={tabela == true ? 'col-12 nutrition active' :  'col-12 nutrition'} >
                             <DataTable
                                 columns={columns}
                                 data={data}
@@ -109,7 +98,7 @@ function Home() {
 
 
 
-                        <div class="col-12 details" >
+                        <div class={tabela == false ? 'col-12 details active' :  'col-12 details'} >
                             <h1>UNLEASH THE ULTRA BEAST!</h1>
                             <p>Sob o céu noturno iluminado por fogos de artifício, você tem sua paixão ao seu lado. Com boa música e melhores amigos, é o melhor verão de todos. Ultra Watermelon é o verão na lata, então você pode aproveitá-lo a qualquer hora. Zero açúcar, sabor refrescante com a mistura explosiva de energia Monster para iluminar as noites quentes de verão.</p>
                         </div>
