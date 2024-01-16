@@ -6,8 +6,6 @@ import home1 from './img/header1.png';
 import home2 from './img/header2.jpg';
 
 function Home() {
-
-    const [nutrition, setNutrition] = useState(false);
     const [tabela, setTabela] = useState(false);
     const data = [
 
