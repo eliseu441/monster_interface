@@ -1,11 +1,12 @@
 .side-nav-container {
 	z-index: 9999;
-	width: 100%;
+	width: 100vw;
+	height: 100vh;
 	position: fixed;
 	top: 0px;
 	color: var(--dark);
 	background-image: url("./sidebarBackground.png");
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	transition: 1s;
 }

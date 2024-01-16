@@ -94,7 +94,7 @@ function Home() {
                             <button class="buttonDetails1 col-4 " type="button" onClick={e => handleClick(true)} >
                                 <p>TABELA</p>
                             </button>
-                            <button class="buttonDetails2 col-4" type="button" onClick={e => handleClick(false)}>
+                            <button class="buttonDetails1 col-4" type="button" onClick={e => handleClick(false)}>
                                 <p>DETALHES</p>
                             </button>
 
